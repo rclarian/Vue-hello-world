@@ -5,3 +5,6 @@ vue create .
 
 --run
 npm run serve
+
+--Mustache (double curly braces)
+<span>Message: {{ msg }}</span>
