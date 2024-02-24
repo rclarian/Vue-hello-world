@@ -1,0 +1,7 @@
+url: https://www.youtube.com/watch?v=5uX80VI0xLE&list=PLC3y8-rFHvwgeQIfSDtEGVvvSEPDkL_1f&index=3&ab_channel=Codevolution
+
+--install in current folder
+vue create .
+
+--run
+npm run serve
