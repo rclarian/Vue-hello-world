@@ -10,6 +10,9 @@
     <h2>Vue</h2>
   </template>
 
+  <h2 v-show="showElement">Using v-show</h2>
+  <h2 v-if="showElement">Using v-if</h2>
+
 </template>
 
 <script>
@@ -20,7 +23,8 @@ export default {
   data() {
     return {
       num: 1,
-      display: true
+      display: true,
+      showElement: false
     };
   },
   components: {
