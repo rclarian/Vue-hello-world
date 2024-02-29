@@ -1,16 +1,14 @@
 <template>
-  <template v-for="name in names" :key="name">
-    <h2>{{ name }}</h2>
-    <input type="text" placeholder="Last name">
-    <hr />
+  <!-- <h2 v-for="name in names" :key="name" v-if="name === 'Bruce'">{{ name }}</h2> -- error this type  of code--> 
+  <template v-for="name of names" :key="name">
+    <h2 v-if="name === 'Bruce'">{{ name }}</h2>
   </template>
-  <button @click="shuffle">Shuffle!</button>
 
 </template>
 
 <script>
 
-import _ from "lodash";
+//import _ from "lodash";
 export default {
   name: 'App',
   data() {
@@ -19,10 +17,7 @@ export default {
     }
   },
   methods: {
-    shuffle() {
-      console.log(this.names);
-      this.names = _.shuffle(this.names);
-    }
+    
   },
   components: {
     
