@@ -1,9 +1,9 @@
 <template>
   <h2>{{ name }}</h2>
   <div>
-    <button v-on:click="name = 'Batman'">Change name</button>
-    <button v-on:mouseover="name = 'Mouse'">Mouseover Change name</button>
-    <button v-on:mouseover="name = 'Vishwas'">Original name</button>
+    <button @click="changeName($event), increment(1, $event)">Change name</button>
+    <button @mouseover="name = 'Mouse'">Mouseover Change name</button>
+    <button @mouseover="name = 'Vishwas'">Original name</button>
   </div>
 
   <h2>{{ count }}</h2>
@@ -15,10 +15,10 @@
   <br>
   <div>
     <h3>Method</h3>
-    <button v-on:click="increment(1)">Increment 1</button>
-    <button v-on:click="increment(5)">Increment 5</button>
-    <button v-on:click="decrement(1)">Decrement 1</button>
-    <button v-on:click="decrement(5)">Decrement 5</button>
+    <button @click="increment(1, $event)">Increment 1</button>
+    <button @click="increment(5, $event)">Increment 5</button>
+    <button @click="decrement(1)">Decrement 1</button>
+    <button @click="decrement(5)">Decrement 5</button>
   </div>
 
 </template>
@@ -35,12 +35,17 @@ export default {
     }
   },
   methods: {
-    increment(num){
-      return this.count += num;
+    increment(num, event){
+      this.count += num;
+      console.log('Event', event);
     },
     decrement(num){
-      return this.count -= num;
+      this.count -= num;
     },
+    changeName(event){
+      this.name = 'Batman';
+      console.log('Event', event);
+    }
   },
   components: {
     
