@@ -1,8 +1,10 @@
 <template>
-  <!-- <h2 v-for="name in names" :key="name" v-if="name === 'Bruce'">{{ name }}</h2> -- error this type  of code--> 
-  <template v-for="name of names" :key="name">
-    <h2 v-if="name === 'Bruce'">{{ name }}</h2>
-  </template>
+  <h2>{{ 2 + 3 + 5 }}</h2>
+  <h2>{{ 5 + 10 + 15 }}</h2>
+  <h2>Add method - {{ add(6, 34, 10) }}</h2>
+  <h2>Add method - {{ add(100, 340, 110) }}</h2>
+  <h2>Sub method - {{ sub(340, 100, 110) }}</h2>
+  <h2>Multiply method - {{ multiply(baseValue) }}</h2>
 
 </template>
 
@@ -13,11 +15,20 @@ export default {
   name: 'App',
   data() {
     return {
-      names: ['Bruce', 'Clark', 'Joanne', 'Ryan', 'Kulit'],
+      baseMultiplier: 5,
+      baseValue: 2
     }
   },
   methods: {
-    
+    add(a, b, c) {
+      return a + b + c;
+    },
+    sub(a, b, c) {
+      return a - b - c;
+    },
+    multiply(num){
+      return num * this.baseMultiplier;
+    }
   },
   components: {
     
@@ -33,5 +44,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  
 }
 </style>
