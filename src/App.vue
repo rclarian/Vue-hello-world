@@ -1,10 +1,25 @@
 <template>
-  <h2>{{ 2 + 3 + 5 }}</h2>
-  <h2>{{ 5 + 10 + 15 }}</h2>
-  <h2>Add method - {{ add(6, 34, 10) }}</h2>
-  <h2>Add method - {{ add(100, 340, 110) }}</h2>
-  <h2>Sub method - {{ sub(340, 100, 110) }}</h2>
-  <h2>Multiply method - {{ multiply(baseValue) }}</h2>
+  <h2>{{ name }}</h2>
+  <div>
+    <button v-on:click="name = 'Batman'">Change name</button>
+    <button v-on:mouseover="name = 'Mouse'">Mouseover Change name</button>
+    <button v-on:mouseover="name = 'Vishwas'">Original name</button>
+  </div>
+
+  <h2>{{ count }}</h2>
+  <div>
+    <h3>Inline</h3>
+    <button v-on:click="count += 1">Increment</button>
+    <button v-on:click="count -= 1">Decrement</button>
+  </div>
+  <br>
+  <div>
+    <h3>Method</h3>
+    <button v-on:click="increment(1)">Increment 1</button>
+    <button v-on:click="increment(5)">Increment 5</button>
+    <button v-on:click="decrement(1)">Decrement 1</button>
+    <button v-on:click="decrement(5)">Decrement 5</button>
+  </div>
 
 </template>
 
@@ -15,20 +30,17 @@ export default {
   name: 'App',
   data() {
     return {
-      baseMultiplier: 5,
-      baseValue: 2
+      name: 'Vishwas',
+      count: 0
     }
   },
   methods: {
-    add(a, b, c) {
-      return a + b + c;
+    increment(num){
+      return this.count += num;
     },
-    sub(a, b, c) {
-      return a - b - c;
+    decrement(num){
+      return this.count -= num;
     },
-    multiply(num){
-      return num * this.baseMultiplier;
-    }
   },
   components: {
     
