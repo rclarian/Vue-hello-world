@@ -4,6 +4,8 @@
   <h2>Inline Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0) }}</h2>
   <button @click="items.push({id: 4, title: 'Keyboard', price: 50})">Add Item</button>
   <h2>Computed Total - {{ total }}</h2>
+  <h2>Method Total - {{ getTotal() }}</h2>
+  <input type="text" v-model="country">
 
 </template>
 
@@ -33,9 +35,14 @@ export default {
           price: 300,
         },
       ],
+      country: '',
     }
   },
   methods: {
+    getTotal(){
+      console.log('getTotal Method');
+      return this.items.reduce((total, curr) => (total = total + curr.price), 0);
+    }
   },
   components: {
   },
@@ -44,6 +51,7 @@ export default {
       return `${this.firstName} ${this.lastName}`;
     },
     total() {
+      console.log('Total computed property');
       return this.items.reduce((total, curr) => (total = total + curr.price), 0);
     }
   },
