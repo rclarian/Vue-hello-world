@@ -1,20 +1,10 @@
 <template>
-  <h2>Fullname - {{ firstName }} {{ lastName }}</h2>
-  <h2>Computed fullname - {{ fullName }}</h2>
-
-  <button @click="changeFullName">Change fullname</button>
-
-  <h2>Inline Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0) }}</h2>
-  <button @click="items.push({id: 4, title: 'Keyboard', price: 50})">Add Item</button>
-  <h2>Computed Total - {{ total }}</h2>
-  <h2>Method Total - {{ getTotal() }}</h2>
-  <input type="text" v-model="country">
-
-  <template v-for="item in items" :key="item.id">
-    <h2 v-if="item.price > 100">{{ item.title }} {{ item.price }}</h2>
-  </template>
-
-  <h2 v-for="item in expensiveItems" :key="item.id">{{ item.title }} {{ item.price }}</h2>
+<h2>Volume Tracker (0-20)</h2>  
+<h3>Current Volume - {{ volume }}</h3>
+<div>
+  <button @click="volume += 2">Increase</button>
+  <button @click="volume -= 2">Decrease</button>
+</div>
 
 </template>
 
@@ -25,59 +15,19 @@ export default {
   name: 'App',
   data() {
     return {
-      firstName: 'Bruce',
-      lastName: 'Wayne',
-      items: [
-        {
-          id: 1,
-          title: 'TV',
-          price: 100,
-        },
-        {
-          id: 2,
-          title: 'Phone',
-          price: 200,
-        },
-        {
-          id: 3,
-          title: 'Laptop',
-          price: 300,
-        },
-      ],
-      country: '',
+      volume: 0
     }
   },
-  methods: {
-    getTotal(){
-      console.log('getTotal Method');
-      return this.items.reduce((total, curr) => (total = total + curr.price), 0);
-    },
-    changeFullName(){
-      this.fullName = 'Clark Kent';
-    }
-  },
-  components: {
-  },
-  computed: {
-    fullName: {
-      get() {
-        return `${this.firstName} ${this.lastName}`
-      },
-      set(value){
-        const names = value.split(' ')
-        this.firstName = names[0]
-        this.lastName = names[1]
+  methods: {},
+  components: {},
+  computed: {},
+  watch: {
+    volume(newValue, oldValue){
+      if(newValue > oldValue && newValue === 16){
+        alert('Listening to a high volume for a long time may change your hearing');
       }
-    },
-    total() {
-      console.log('Total computed property');
-      return this.items.reduce((total, curr) => (total = total + curr.price), 0);
-    },
-    expensiveItems(){
-      return this.items.filter( item => item.price > 100);
     }
   },
- 
 }
 </script>
 
