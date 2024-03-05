@@ -3,19 +3,24 @@
     <GreetComponent name="Ryan" hero-name="Batman"/>
     <GreetComponent name="Clark" hero-name="Superman"/>
     <GreetComponent name="Diana" hero-name="Wonder Woman"/>
-
     <GreetComponent :name="name" :hero-name="channel"/>
+
+    <ArticleComponent title="Article Title by Ryan" :likes="50" :isPublished="false"/>
+    <ArticleComponent :likes="50" :isPublished="false"/>
+    
     
   </div>
 </template>
 
 <script>
 import GreetComponent from './components/GreetComponent.vue'
+import ArticleComponent from './components/ArticleComponent.vue'
 
 export default {
   name: 'App',
   components: {
     GreetComponent,
+    ArticleComponent
   },
   data() {
     return {
