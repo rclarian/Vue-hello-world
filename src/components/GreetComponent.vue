@@ -1,12 +1,13 @@
 <template>
     <div>
-        <h2>hello from GreetComponent</h2>
+        <h2>Hello {{ name }} a.k.a {{ hero-name }}</h2>
     </div>
 </template>
 
 <script>
     export default {
         name: 'GreetComponent',
+        props: ['name', 'hero-name'],
     }
 </script>
 

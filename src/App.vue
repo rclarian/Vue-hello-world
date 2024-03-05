@@ -1,6 +1,11 @@
 <template>
   <div>
-    <GreetComponent />
+    <GreetComponent name="Ryan" hero-name="Batman"/>
+    <GreetComponent name="Clark" hero-name="Superman"/>
+    <GreetComponent name="Diana" hero-name="Wonder Woman"/>
+
+    <GreetComponent :name="name" :hero-name="channel"/>
+    
   </div>
 </template>
 
@@ -14,7 +19,8 @@ export default {
   },
   data() {
     return {
-      
+      name: 'Vishwas',
+      channel: 'Codevolution',
     }
   },
   methods: {},
