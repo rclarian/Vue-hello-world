@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Article component</h2>
-        <h2>Title - {{ title }}</h2>
+        <h2 :="$attrs">Title - {{ title }}</h2>
         <h2>Likes - {{ likes }}</h2>
         <h2>IsPublished - {{ isPublished ? 'Yes' : 'No' }}</h2>
     </div>
@@ -18,7 +18,8 @@
             },
             likes: Number,
             isPublished: Boolean,
-        }
+        },
+        inheritAttrs: false,
     }
 </script>
 

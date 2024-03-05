@@ -5,7 +5,7 @@
     <GreetComponent name="Diana" hero-name="Wonder Woman"/>
     <GreetComponent :name="name" :hero-name="channel"/>
 
-    <ArticleComponent title="Article Title by Ryan" :likes="50" :isPublished="false"/>
+    <ArticleComponent id="my-article" title="Article Title by Ryan" :likes="50" :isPublished="false"/>
     <ArticleComponent :likes="50" :isPublished="false"/>
     
     
