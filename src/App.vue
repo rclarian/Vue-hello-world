@@ -1,22 +1,21 @@
 <template>
-  <button @click="showPopup = true">Show Popup</button>
-  <!-- <PopupComponent v-show="showPopup" @close="showPopup = false"/> -->
-  <PopupComponent v-show="showPopup" @close="closePopup"/>
+
+  <InputComponent v-model="name"/>
+  
 </template>
 
 <script>
-
-import PopupComponent from './components/PopupComponent.vue';
+import InputComponent from './components/InputComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    PopupComponent,
+    InputComponent,
 
   },
   data() {
     return {
-      showPopup: false
+      name: ''
     }
   },
   provide() {
