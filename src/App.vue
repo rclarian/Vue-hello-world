@@ -1,29 +1,15 @@
 <template>
-  <NameList>
-    <template v-slot:default="slotProps">
-      {{ slotProps.firstName }} {{ slotProps.lastName }}
-    </template>
-  </NameList>
-  <NameList>
-    <template v-slot:default="slotProps">
-      {{ slotProps.lastName }} {{ slotProps.firstName }} 
-    </template>
-  </NameList>
-  <NameList>
-    <template v-slot:default="slotProps">
-      {{ slotProps.firstName }} 
-    </template>
-  </NameList>
-
+  <h4>App component text</h4>
+  <ChildStyles/>
 </template>
 
 <script>
-import NameList from './components/NameList.vue'
+import ChildStyles from './components/ChildStyles.vue'
 
 export default {
   name: 'App',
   components: {
-    NameList,
+    ChildStyles,
   },
   data() {
     return {
@@ -46,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,33 +40,11 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
-  
 }
 
-label {
-  font-weight: bold;
-  display: flex;
-  margin-bottom: 5px;
-  margin-top: 10px;
+h4 {
+  color: orange;
 }
 
-input + label {
-  font-weight: bold;
-  display: inline-flex;
-  margin-right: 20px;
-}
-
-input[type='text'], textarea, select {
-  display: block;
-  width: 400px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
 
 </style>
