@@ -1,35 +1,21 @@
 <template>
-  <div class="container">
-    <div class="content">
-      <h1>My App</h1>
-      <p>
-        This is an example of how you might use Vue Teleport. I think it is a
-        pretty neat API that is yet another awesome escape hatch that Vue
-        provides for practical reasons. Sometimes you just need to render
-        something completely outside the Vue component tree.
-      </p>
-      <button @click="showModal = true">Show Modal</button>
-      <teleport to="#modal-root">
-        <ModalComponent v-show="showModal" @close="showModal = false">
-          This is the secret modal message!
-        </ModalComponent>
-      </teleport>
-    </div>
+  <div>
+    <PostList></PostList> 
   </div>
  
 </template>
 
 <script>
-import ModalComponent from './components/ModalComponent.vue'
+import PostList from './components/PostList.vue'
 
 export default {
   name: 'App',
   components: {
-    ModalComponent,
+    PostList,
   },
   data() {
     return {
-      showModal: false,
+      
     }
   },
   provide() {
