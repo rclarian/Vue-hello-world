@@ -14,6 +14,9 @@
 import axios from 'axios'
     export default {
         name: 'PostList',
+        created(){
+            this.getPosts()
+        },
         data() {
             return {
                 posts: [],
