@@ -1,20 +1,18 @@
 <template>
   <div>
-    <ParentComponent />
-    <PostList />
+    <TemplateRef />
 
   </div>
  
 </template>
 
 <script>
-import ParentComponent from './components/ParentComponent.vue'
-import PostList from './components/PostList.vue';
+import TemplateRef from './components/TemplateRef.vue';
 
 export default {
   name: 'App',
   components: {
-    ParentComponent, PostList
+    TemplateRef,
   },
   data() {
     return {
