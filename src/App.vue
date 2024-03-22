@@ -1,19 +1,20 @@
 <template>
   <div>
     
-    <ComputedC />
+    <WatchComponent />
 
   </div>
  
 </template>
 
 <script>
-import ComputedC from './components/ComputedC.vue';
+
+import WatchComponent from './components/WatchComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    ComputedC,
+    WatchComponent,
   },
   data() {
     return {
