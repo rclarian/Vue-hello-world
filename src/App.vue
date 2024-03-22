@@ -1,20 +1,18 @@
 <template>
   <div>
-    <DemoOne />
-    <DemoTwo />
+    <MethodsC />
 
   </div>
  
 </template>
 
 <script>
-import DemoOne from './components/DemoOne.vue';
-import DemoTwo from './components/DemoTwo.vue';
+import MethodsC from './components/MethodsC.vue';
 
 export default {
   name: 'App',
   components: {
-    DemoOne, DemoTwo
+    MethodsC,
   },
   data() {
     return {
