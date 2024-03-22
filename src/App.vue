@@ -1,18 +1,20 @@
 <template>
   <div>
-    <MethodsC />
+    
+    <VModel />
 
   </div>
  
 </template>
 
 <script>
-import MethodsC from './components/MethodsC.vue';
+
+import VModel from './components/VModel.vue';
 
 export default {
   name: 'App',
   components: {
-    MethodsC,
+    VModel,
   },
   data() {
     return {
