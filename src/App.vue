@@ -1,20 +1,19 @@
 <template>
   <div>
     
-    <VModel />
+    <ComputedC />
 
   </div>
  
 </template>
 
 <script>
-
-import VModel from './components/VModel.vue';
+import ComputedC from './components/ComputedC.vue';
 
 export default {
   name: 'App',
   components: {
-    VModel,
+    ComputedC,
   },
   data() {
     return {
