@@ -34,6 +34,11 @@ import { ref, reactive } from 'vue'
 
             const reactiveGreetHero = `Hello ${state.firstName} ${state.lastName} a.k.a ${state.heroName}`
 
+            // const isLogin = ref(false)
+            // const isLoginReactive = reactive({
+            //     value: false
+            // })
+
             return {
                 c_firstName,
                 c_lastName,
