@@ -1,19 +1,19 @@
 <template>
   <div>
     
-    <ProvideInject />
+    <TemplateReference />
 
   </div>
  
 </template>
 
 <script>
-import ProvideInject from './components/ProvideInject.vue';
+import TemplateReference from './components/TemplateReference.vue';
 
 export default {
   name: 'App',
   components: {
-    ProvideInject,
+    TemplateReference
   },
   data() {
     return {
