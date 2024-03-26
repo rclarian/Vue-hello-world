@@ -1,19 +1,19 @@
 <template>
   <div>
     
-    <TemplateReference />
+    <PersonC />
 
   </div>
  
 </template>
 
 <script>
-import TemplateReference from './components/TemplateReference.vue';
+import PersonC from './components/PersonC.vue';
 
 export default {
   name: 'App',
   components: {
-    TemplateReference
+    PersonC
   },
   data() {
     return {
