@@ -8,3 +8,7 @@ npm run serve
 
 --Mustache (double curly braces)
 <span>Message: {{ msg }}</span>
+
+--Deploy to live 
+netlify.com
+66 - Deploying Vue Applications - watch
